@@ -89,8 +89,8 @@ router.get("/:id_produto",(req, res, next) => {
                         preco: result[0].preco,
                         request: {
                             tipo: "GET", 
-                            descricao: "Retorna os detalhes de um produto específico",
-                            url: "http://localhost:3000/produtos/" + prod.id_produto
+                            descricao: "Retorna todos os produtos",
+                            url: "http://localhost:3000/produtos" 
                         }
                     }
                 }

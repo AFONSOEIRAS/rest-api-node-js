@@ -2,11 +2,12 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
+
 const rotaProdutos = require("./routes/produtos");
 const rotaPedidos = require("./routes/pedidos");
 
 app.use(morgan("dev"));
-
+app.use('/uploads', express.static('uploads'));
 app.use(express.urlencoded({extended:false})); // apenas dados simples
 app.use(express.json()); // json de entrada no body
 

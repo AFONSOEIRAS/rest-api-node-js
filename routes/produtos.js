@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mysql = require("../mysql").pool;
-const multer = require("multer");
+const multer = require("multer"); //imagens
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
